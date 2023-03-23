@@ -59,13 +59,13 @@ public class ProductController {
 
     // 필드오류
     if(saveForm.getQuantity() == 100){
-      bindingResult.rejectValue("quantity","","수량 100 입력불가!");
+      bindingResult.rejectValue("quantity","product");
     }
 
     // 글로벌오류
     // 총액(상품수량*단가) 1000만원 초과금지
     if(saveForm.getQuantity() * saveForm.getPrice() > 10_000_000L){
-      bindingResult.reject("",null,"총액(상품수량*단가) 1000만원 초과할 수 없습니다!");
+      bindingResult.reject("product", new String[]{"1000"},"");
 
     }
     if(saveForm.getQuantity() > 1 && saveForm.getQuantity() <10){
@@ -136,7 +136,7 @@ public class ProductController {
       RedirectAttributes redirectAttributes
   ){
     //데이터 검증
-    
+
     Product product = new Product();
     product.setProductId(productId);
     product.setPname(updateForm.getPname());
