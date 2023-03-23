@@ -76,7 +76,7 @@ public class ProductDAOImplTest {
     Long productId = 165L;
     int deletedRowCount = productDAO.delete(productId);
     Optional<Product> findedProduct = productDAO.findById(productId);
-   // Product product = findedProduct.orElseThrow();
+    // Product product = findedProduct.orElseThrow();
     //case1)
 //    Assertions.assertThat(findedProduct.ofNullable("없음").orElseThrow())
 //        .isNotEqualTo("없음");

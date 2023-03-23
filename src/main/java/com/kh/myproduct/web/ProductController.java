@@ -47,7 +47,7 @@ public class ProductController {
       @Valid @ModelAttribute SaveForm saveForm,
       BindingResult bindingResult,  //검증 결과를 담는 객체
       RedirectAttributes redirectAttributes
-      ){
+  ){
 //    log.info("pname={}, quantity={}, price={}",pname,quantity,price);
     log.info("saveForm={}",saveForm);
 
