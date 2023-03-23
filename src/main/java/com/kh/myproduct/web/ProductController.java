@@ -59,7 +59,7 @@ public class ProductController {
 
     // 필드오류
     if(saveForm.getQuantity() == 100){
-      bindingResult.rejectValue("quantity","","수량 100 입력불가!");
+      bindingResult.rejectValue("quantity","","");
     }
 
     // 글로벌오류
