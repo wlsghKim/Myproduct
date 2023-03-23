@@ -33,6 +33,10 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
 	/******************************************/
+<<<<<<< HEAD
+=======
+
+>>>>>>> e90d0169f5ad108a1ee3059e39d908e20152c7c9
 }
 
 tasks.named('test') {

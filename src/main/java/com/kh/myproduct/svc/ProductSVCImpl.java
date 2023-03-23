@@ -21,6 +21,10 @@ public class ProductSVCImpl implements ProductSVC{
 
   @Override
   public Optional<Product> findById(Long productId) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> e90d0169f5ad108a1ee3059e39d908e20152c7c9
     return productDAO.findById(productId);
   }
 
@@ -38,9 +42,12 @@ public class ProductSVCImpl implements ProductSVC{
   public List<Product> findAll() {
     return productDAO.findAll();
   }
+<<<<<<< HEAD
 
   @Override
   public boolean isExist(Long productId) {
     return productDAO.isExist(productId);
   }
+=======
+>>>>>>> e90d0169f5ad108a1ee3059e39d908e20152c7c9
 }
