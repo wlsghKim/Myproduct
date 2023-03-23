@@ -43,6 +43,7 @@ public class ProductController {
 //      @Param("pname") String pname,
 //      @Param("quantity") Long quantity,
 //      @Param("price") Long price
+//      @ModelAttribute : 1. 요청데이터를 자바객체로 변화
       @Valid @ModelAttribute("form") SaveForm saveForm,
       BindingResult bindingResult,  //검증 결과를 담는 객체
       RedirectAttributes redirectAttributes
