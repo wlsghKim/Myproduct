@@ -2,6 +2,7 @@ package com.kh.myproduct.web;
 
 import com.kh.myproduct.dao.Product;
 import com.kh.myproduct.svc.ProductSVC;
+import com.kh.myproduct.web.exception.RestBizException;
 import com.kh.myproduct.web.rest.SaveRest;
 import com.kh.myproduct.web.rest.UpdateRest;
 import lombok.RequiredArgsConstructor;
@@ -51,8 +52,9 @@ public class RestProductController {
 
     //1)상품존재유뮤판단
     if(!productSVC.isExist(productId)){
-      res = RestResponse.createRestResponse("01", "해당 상품이 없습니다.", null);
-      return res;
+//      res = RestResponse.createRestResponse("01", "해당 상품이 없습니다.", null);
+//      return res;
+      throw new RestBizException("99","해당 상품이 없습니다.");
     }
 
     Optional<Product> findedProduct = productSVC.findById(productId);
@@ -65,7 +67,7 @@ public class RestProductController {
   public RestResponse<Object> update(
       @PathVariable("id") Long productId,
       @RequestBody UpdateRest updateRest
-      ){
+  ){
     RestResponse<Object> res = null;
 
     //검증
@@ -73,8 +75,9 @@ public class RestProductController {
 
     //1)상품존재유뮤판단
     if(!productSVC.isExist(productId)){
-      res = RestResponse.createRestResponse("01", "해당 상품이 없습니다.", null);
-      return res;
+//      res = RestResponse.createRestResponse("01", "해당 상품이 없습니다.", null);
+//      return res;
+      throw new RestBizException("99","해당 상품이 없습니다.");
     }
 
     //2)수정
@@ -102,8 +105,9 @@ public class RestProductController {
 
     //1)상품존재유뮤판단
     if(!productSVC.isExist(productId)){
-      res = RestResponse.createRestResponse("01", "해당 상품이 없습니다.", null);
-      return res;
+//      res = RestResponse.createRestResponse("01", "해당 상품이 없습니다.", null);
+//      return res;
+      throw new RestBizException("99","해당 상품이 없습니다.");
     }
 
     //2)상품삭제

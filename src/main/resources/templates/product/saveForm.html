@@ -73,6 +73,13 @@
       price.focus();
       return;
     }
+       if(!regExp.test(price.value)){
+      const msg = '숫자만 입력하세요';
+      price.nextElementSibling.textContent = msg;
+      price.focus();
+      price.selected();
+      return;
+    }
 
     //전송
     frm.submit();
