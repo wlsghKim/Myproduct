@@ -4,6 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class RestBizException extends RuntimeException{
+
   private String code;
 
   public RestBizException() {
@@ -18,7 +19,6 @@ public class RestBizException extends RuntimeException{
     super(message);
     this.code = code;
   }
-
   public RestBizException(String message, Throwable cause) {
     super(message, cause);
   }
@@ -31,4 +31,3 @@ public class RestBizException extends RuntimeException{
     super(message, cause, enableSuppression, writableStackTrace);
   }
 }
-

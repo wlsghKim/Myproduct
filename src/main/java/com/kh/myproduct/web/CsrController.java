@@ -11,6 +11,5 @@ public class CsrController {
   @GetMapping("/products")
   public String manageProduct(){
     return "/csr/product/product";
-
   }
 }

@@ -170,9 +170,9 @@ public class ProductController {
 
     List<Product> products = productSVC.findAll();
     model.addAttribute("products",products);
-     if(products.size() == 0){
-       throw new BizException("등록된 상품정보가 없습니다");
-     }
+    if (products.size() == 0) {
+      throw new BizException("등록된 상품정보가 없습니다");
+    }
     return "product/all";
   }
 
