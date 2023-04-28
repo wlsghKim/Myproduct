@@ -145,7 +145,6 @@ public class ProductDAOImpl implements ProductDAO{
 
     return list;
   }
-
   class RowMapperImpl implements RowMapper<Product> {
 
     @Override
@@ -158,6 +157,7 @@ public class ProductDAOImpl implements ProductDAO{
       return product;
     }
   }
+
 
 //  RowMapper<Product> rowMapper = new RowMapper<Product>() {
 //    @Override
